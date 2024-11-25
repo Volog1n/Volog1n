@@ -2,15 +2,15 @@ import json
 
 # Создаем словарь покупок из purchase_log.txt
 purchases = {}
-with open('Downloads/purchase_log.txt', encoding='utf-8') as f:
+with open('data/purchase_log.txt', encoding='utf-8') as f:
     next(f)  # пропускаем заголовок
     for line in f:
         record = json.loads(line)
         purchases[record['user_id']] = record['category']
 
 # Создаем funnel.csv и записываем в него данные
-with open('Downloads/visit_log.csv') as visits, \
-     open('Downloads/funnel.csv', 'w') as funnel:
+with open('data/visit_log.csv') as visits, \
+     open('data/funnel.csv', 'w') as funnel:
     
     # Записываем заголовок
     funnel.write('user_id,source,category\n')

@@ -4,7 +4,7 @@ import json
 purchases = {}
 
 # Открываем файл и читаем первые 6 строк (1 строка заголовок + 5 строк данных)
-with open('Downloads/purchase_log.txt', encoding='utf-8') as f:
+with open('data/purchase_log.txt', encoding='utf-8') as f:
     # Пропускаем первую строку с заголовками
     next(f)
     # Читаем следующие 5 строк
